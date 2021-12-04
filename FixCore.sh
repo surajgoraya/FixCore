@@ -14,14 +14,5 @@ echo "FixCore"
 echo "-------"
 echo "Attempting to kill CoreAudio..."
 
-
 sudo launchctl kickstart -kp system/com.apple.audio.coreaudiod
-killStatus=$?
-
-# echo "\nlaunchctl returned code: " $killStatus "\n"
-
-if [ $killStatus == 1 ] || [ $killStatus == 2 ] || [ $killStatus == 3 ]; then
-    echo "😰 Error killing CoreAudio, perhaps you don't have permissions to do so?"
-else
-    echo "\n✅ Killed CoreAudio, it should reboot automatically."
-fi
+echo "\n✅ Killed CoreAudio, it should reboot automatically."
