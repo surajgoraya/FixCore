@@ -1,8 +1,8 @@
 # -------------------------
-# FixCore (2021-07-24)
+# FixCore (2023-06-06)
 # @surajgoraya
 # 
-# Kills the CoreAudio service on macOS to get it try
+# Kills the CoreAudio & bluetoothd service on macOS to get it try
 # and reboot itself. It usually fixes issues I have
 # with macOS seemingly forever *trying* to connect
 # to my AirPods. 
@@ -12,7 +12,13 @@
 
 echo "FixCore"
 echo "-------"
-echo "Attempting to kill CoreAudio..."
+echo "Step One: Attempting to kill CoreAudio..."
 
 sudo launchctl kickstart -kp system/com.apple.audio.coreaudiod
 echo "\n✅ Killed CoreAudio, it should reboot automatically."
+
+echo "Step Two Kill Bluetooth Service (WARNING: THIS WILL DISCONNECT ALL BLUETOOTH DEVICES)"
+
+sudo launchctl stop system/com.apple.bluetoothd 
+sudo launchctl start system/com.apple.bluetoothd
+echo "\n✅ Killed bluetoothd, it should reboot automatically."
