@@ -1,5 +1,5 @@
 run:
-	sh ./FixCore.sh
+	source ./FixCore.sh
 
 update:
 	git pull

@@ -17,7 +17,7 @@ echo "Step One: Attempting to kill CoreAudio..."
 sudo launchctl kickstart -kp system/com.apple.audio.coreaudiod
 echo "\n✅ Killed CoreAudio, it should reboot automatically."
 
-echo "Step Two Kill Bluetooth Service (WARNING: THIS WILL DISCONNECT ALL BLUETOOTH DEVICES)"
+echo "\n\nStep Two: Kill Bluetooth Service (⛔️ WARNING: THIS WILL DISCONNECT ALL BLUETOOTH DEVICES)"
 
 sudo launchctl stop system/com.apple.bluetoothd 
 sudo launchctl start system/com.apple.bluetoothd
