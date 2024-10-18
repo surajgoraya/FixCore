@@ -5,4 +5,4 @@ update:
 	git pull
 
 all:
-	git pull && sh ./FixCore.sh
+	git pull && sh source ./FixCore.sh
