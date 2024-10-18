@@ -1,5 +1,5 @@
 # -------------------------
-# FixCore (2023-06-06)
+# FixCore (2024-09-18)
 # @surajgoraya
 # 
 # Kills the CoreAudio & bluetoothd service on macOS to get it try
@@ -17,8 +17,8 @@ echo "Step One: Attempting to kill CoreAudio..."
 sudo launchctl kickstart -kp system/com.apple.audio.coreaudiod
 echo "\n✅ Killed CoreAudio, it should reboot automatically."
 
-echo "\n\nStep Two: Kill Bluetooth Service (⛔️ WARNING: THIS WILL DISCONNECT ALL BLUETOOTH DEVICES)"
+echo "\nStep Two: Kill Bluetooth Service (⛔️ WARNING: THIS WILL DISCONNECT ALL BLUETOOTH DEVICES)"
 
-sudo launchctl stop system/com.apple.bluetoothd 
-sudo launchctl start system/com.apple.bluetoothd
+sudo launchctl kickstart -kp system/com.apple.bluetoothd 
 echo "\n✅ Killed bluetoothd, it should reboot automatically."
+echo "-------"
