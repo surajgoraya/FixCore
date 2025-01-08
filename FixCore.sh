@@ -15,7 +15,7 @@ echo "-------"
 echo "Step One: Attempting to kill CoreAudio..."
 
 # Required as of MacOS 14.4 - See https://developer.apple.com/documentation/macos-release-notes/macos-14_4-release-notes#Core-Audio
-sudo kill system/com.apple.audio.coreaudiod
+sudo killall coreaudiod
 sudo launchctl kickstart -p system/com.apple.audio.coreaudiod
 
 echo "\n✅ Killed CoreAudio, it should reboot automatically."
