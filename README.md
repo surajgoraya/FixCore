@@ -12,7 +12,7 @@ forever *trying* to connect to my AirPods.
 
 `make` or `make run`
 
-Alternatively: `sh ./FixCore.sh`
+Alternatively: `source ./FixCore.sh`
 
 ## Create an alias for quick access
 
