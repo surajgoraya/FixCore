@@ -17,8 +17,8 @@ Alternatively: `sh ./FixCore.sh`
 ## Create an alias for quick access
 
 To quickly do this via your terminal you can opt to add an alias in your `~/.zshrc` or `~/.bashrc`.
-
+```bash
     alias fixcore="cd ~/FixCore && make"
-    (assuming your fixcore clone is in your home directory, change cd path as needed.)
-
+    # (assuming your fixcore clone is in your home directory, change cd path as needed.)
+```
 That way you're able to call `fixcore` anywhere in the terminal
